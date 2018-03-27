@@ -1,6 +1,6 @@
 <%= form_for @folder do |f| %>
-  <%= f.label 'Enter folder name:' %>
-  <%= f.text_field :name, placeholder: 'Folder Name' %>
-  <%= f.hidden_field :parent_id, :value => params[:folder_id] %>
-  <%= f.submit 'Save' %>
+  <%= f.label 'Enter folder name:' %> <br>
+  <%= f.text_field :name, placeholder: 'Folder Name' %> <br>
+  <%= f.hidden_field :parent_id, :value => params[:folder_id] %> 
+  <%= f.submit 'Save', class: 'btn btn-primary' %>
 <% end %>
