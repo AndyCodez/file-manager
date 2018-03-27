@@ -1,8 +1,8 @@
 <%= link_to "Upload File", '#', class: 'btn btn-primary' %>
 <%= link_to "Create Folder", new_folder_path, class: 'btn btn-primary' %>
 
-<br>
-Path:/
-<br>
+<div class="breadcrumbs">
+  Path: /
+</div>
 
 <%= render 'folders/display_folders' %>
