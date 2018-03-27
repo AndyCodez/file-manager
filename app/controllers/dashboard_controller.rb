@@ -1,7 +1,7 @@
 class DashboardController < ApplicationController
   def dashboard
-  	# Root folders
+  	# Root folders and Root files
   	@folders = Folder.roots
-  	@user_files = UserFile.where(folder_id: nil)
+  	@user_files = UserFile.roots
   end
 end
