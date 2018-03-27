@@ -17,7 +17,8 @@ class FoldersController < ApplicationController
 
   def show
   	@folder = Folder.find(params[:id])
-  	@children_folders = @folder.children
+  	# Children folders
+  	@folders = @folder.children
   end
 
   private

@@ -1,0 +1,12 @@
+<% if @folders %>
+  <ul>
+    <% @folders.each do |folder| %>
+      <li>
+      	<%= link_to folder.name, folder %>
+      </li>
+    <% end %>	
+  </ul>
+<% else %>
+No Files/Folders
+<% end %>
+
