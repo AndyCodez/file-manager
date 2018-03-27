@@ -15,6 +15,11 @@ class FoldersController < ApplicationController
   	end
   end
 
+  def show
+  	@folder = Folder.find(params[:id])
+  	@children_folders = @folder.children
+  end
+
   private
   def folder_params
     params.require(:folder).permit(:name, :parent_id)

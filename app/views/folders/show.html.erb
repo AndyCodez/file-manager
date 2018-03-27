@@ -1,0 +1,21 @@
+<h3>Show Folder <%= @folder.name %></h3>
+<%= link_to "Upload File", '#' %>
+<%= link_to "Create Folder", new_folder_path %>
+
+<br>
+Path:/
+<br>
+
+No Files/Folders
+<ul>
+  <% if @children_folders %>
+    <% @children_folders.each do |folder| %>
+      <li>
+      	<%= link_to folder.name, folder %>
+      	<%= " Ancestry = #{folder.ancestry}" %>
+      </li>
+    <% end %>	
+  <% end %>
+</ul>
+
+
