@@ -10,7 +10,6 @@ class FoldersController < ApplicationController
   		flash[:success] = 'Folder created successfully.'
   		redirect_to @folder
   	else
-  		flash[:warning] = 'Something went wrong.'
   		render 'new'
   	end
   end
