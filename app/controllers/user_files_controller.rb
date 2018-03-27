@@ -24,6 +24,6 @@ class UserFilesController < ApplicationController
 
   private
   def user_file_params
-  	params.require(:user_file).permit(:file)
+  	params.require(:user_file).permit(:file, :folder_id)
   end
 end

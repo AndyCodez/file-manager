@@ -1,4 +1,5 @@
 <%= form_for @user_file do |f| %>
   <%= f.file_field :file %>
+  <%= f.hidden_field :folder_id, :value => params[:folder_id] %>
   <%= f.submit 'Upload file', class: "btn btn-primary" %>
 <% end %>

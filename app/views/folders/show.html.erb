@@ -1,4 +1,4 @@
-<%= link_to "Upload File", '#', class: 'btn btn-primary' %>
+<%= link_to "Upload File", new_user_file_path(folder_id: @folder.id), class: 'btn btn-primary' %>
 <%= link_to "Create Folder", new_folder_path(folder_id: @folder.id), class: 'btn btn-primary' %>
 
 <div class="breadcrumbs">

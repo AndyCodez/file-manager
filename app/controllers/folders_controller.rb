@@ -16,9 +16,10 @@ class FoldersController < ApplicationController
 
   def show
   	@folder = Folder.find(params[:id])
-  	# Children folders
-  	@folders = @folder.children
-    @user_files = UserFile.all
+
+  	# Children folders and associated user files
+    @folders = @folder.children
+    @user_files = @folder.user_files
   end
 
   def destroy
