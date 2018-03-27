@@ -10,7 +10,6 @@ class UserFilesController < ApplicationController
   		flash[:success] = "File successfully uploaded."
   		redirect_to root_path
   	else
-  		flash[:warning] = "Something went wrong. File not uploaded."
   		render 'new'
   	end
   end
