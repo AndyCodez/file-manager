@@ -18,6 +18,7 @@ class FoldersController < ApplicationController
   	@folder = Folder.find(params[:id])
   	# Children folders
   	@folders = @folder.children
+    @user_files = UserFile.all
   end
 
   def destroy
