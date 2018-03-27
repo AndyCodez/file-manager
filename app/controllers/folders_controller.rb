@@ -20,6 +20,13 @@ class FoldersController < ApplicationController
   	@folders = @folder.children
   end
 
+  def destroy
+    @folder = Folder.find(params[:id])
+    @folder.destroy
+    flash[:success] = "Folder deleted."
+    redirect_to request.referrer || root_url
+  end
+
   private
   def folder_params
     params.require(:folder).permit(:name, :parent_id)

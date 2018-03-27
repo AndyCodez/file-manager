@@ -4,6 +4,10 @@
       <li>
       	<i class="fa fa-folder"></i>
       	<%= link_to folder.name, folder %>
+
+      	<%= link_to(folder, method: :delete, data: { confirm: "Are you sure you want to delete this folder and all its contents?" } ) do %>
+          <%= fa_icon "trash" %>
+      	<% end %>
       </li>
     <% end %>	
   </ul>
