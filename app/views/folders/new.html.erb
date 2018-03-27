@@ -1,6 +1,6 @@
 <%= form_for @folder do |f| %>
   <%= f.label 'Enter folder name:' %>
   <%= f.text_field :name, placeholder: 'Folder Name' %>
-  <%= f.collection_select :parent_id, Folder.order(:name),:id, :name, include_blank: true %>
+  <%= f.hidden_field :parent_id, :value => params[:folder_id] %>
   <%= f.submit 'Save' %>
 <% end %>
