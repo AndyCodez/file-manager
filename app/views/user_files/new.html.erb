@@ -1,2 +1,4 @@
-<h1>UserFiles#new</h1>
-<p>Find me in app/views/user_files/new.html.erb</p>
+<%= form_for @user_file do |f| %>
+  <%= f.file_field :file %>
+  <%= f.submit 'Upload file', class: "btn btn-primary" %>
+<% end %>
