@@ -15,6 +15,13 @@ class UserFilesController < ApplicationController
   	end
   end
 
+  def destroy
+    user_file = UserFile.find(params[:id])
+    user_file.destroy
+    flash[:success] = "File deleted."
+    redirect_to request.referrer || root_url
+  end
+
   private
   def user_file_params
   	params.require(:user_file).permit(:file)
