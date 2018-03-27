@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180327205941) do
+ActiveRecord::Schema.define(version: 20180327230115) do
 
   create_table "folders", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20180327205941) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "file"
+    t.integer "folder_id"
+    t.index ["folder_id"], name: "index_user_files_on_folder_id"
   end
 
 end
