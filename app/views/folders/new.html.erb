@@ -1,0 +1,5 @@
+<%= form_for @folder do |f| %>
+  <%= f.label 'Enter folder name:' %>
+  <%= f.text_field :name, placeholder: 'Folder Name' %>
+  <%= f.submit 'Save' %>
+<% end %>
