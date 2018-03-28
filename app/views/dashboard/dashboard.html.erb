@@ -4,7 +4,12 @@
 	<%= link_to "Create Folder", new_folder_path, class: 'btn btn-primary' %>
 
 	<div class="breadcrumbs">
-	  Path: /
+	  <h4>
+	    <%= link_to(root_path ) do %>
+          <%= fa_icon "home" %>
+        <% end %>
+	    Path: /
+	  </h4>
 	</div>
 
 	<%= render 'shared/display_contents' %>  	

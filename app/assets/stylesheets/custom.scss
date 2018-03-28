@@ -2,7 +2,16 @@
 @import "bootstrap";
 
 body {
-	padding: 30px;
+  padding: 30px;
+  line-height: 2em;
+}
+
+i.fa {
+  font-size: 25px;
+  &.fa-trash {
+    color: #ff5000;
+    float: right;
+  }
 }
 
 /* forms */

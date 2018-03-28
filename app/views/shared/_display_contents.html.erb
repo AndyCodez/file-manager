@@ -1,10 +1,10 @@
 <% if @folders.empty? && @user_files.empty? %>
   No Files/Folders
 <% else %>
-  <ul>
+  <ul class="list-group">
     <% if @folders %>
       <% @folders.each do |folder| %>
-        <li>
+        <li class="list-group-item">
           <i class="fa fa-folder"></i>
           <%= link_to folder.name, folder %>
           <%= link_to(folder, method: :delete, data: { confirm: "Are you sure you want to delete this folder and all its contents?" } ) do %>
@@ -16,7 +16,7 @@
 
     <% if @user_files %> 
       <% @user_files.each do |user_file| %>
-        <li>
+        <li class="list-group-item">
           <i class="fa fa-file"></i>
           <%= link_to File.basename(user_file.file.url), user_file.file.url %>
           <%= link_to(user_file, method: :delete, data: { confirm: "Are you sure you want to delete this file?" } ) do %>
