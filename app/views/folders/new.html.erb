@@ -1,7 +1,11 @@
-<%= form_for @folder do |f| %>
-  <%= render 'error_messages' %>
-  <%= f.label 'Enter folder name:' %> <br>
-  <%= f.text_field :name, placeholder: 'Folder Name' %> <br>
-  <%= f.hidden_field :parent_id, :value => params[:folder_id] %> 
-  <%= f.submit 'Save', class: 'btn btn-primary' %>
-<% end %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+	<%= form_for @folder do |f| %>
+	  <%= render 'error_messages' %>
+	  <%= f.label 'Enter folder name:' %> <br>
+	  <%= f.text_field :name, placeholder: 'Folder Name' %> <br>
+	  <%= f.hidden_field :parent_id, :value => params[:folder_id] %> 
+	  <%= f.submit 'Save', class: 'btn btn-primary' %>
+	<% end %>  	
+  </div>
+</div>

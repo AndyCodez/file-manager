@@ -1,6 +1,11 @@
-<%= form_for @user_file do |f| %>
-  <%= render 'error_messages' %>
-  <%= f.file_field :file %>
-  <%= f.hidden_field :folder_id, :value => params[:folder_id] %>
-  <%= f.submit 'Upload file', class: "btn btn-primary" %>
-<% end %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+	<%= form_for @user_file do |f| %>
+	  <%= render 'error_messages' %>
+	  <%= f.label "Please select a file to upload" %>
+	  <%= f.file_field :file %>
+	  <%= f.hidden_field :folder_id, :value => params[:folder_id] %>
+	  <%= f.submit 'Upload file', class: "btn btn-primary" %>
+	<% end %>  	
+  </div>
+</div>
