@@ -2,7 +2,7 @@
   No Files/Folders
 <% else %>
   <ul class="list-group">
-    <% if @folders %>
+
       <% @folders.each do |folder| %>
         <li class="list-group-item">
           <i class="fa fa-folder"></i>
@@ -12,9 +12,7 @@
           <% end %>
         </li>
       <% end %> 
-    <% end %>
-
-    <% if @user_files %> 
+    
       <% @user_files.each do |user_file| %>
         <li class="list-group-item">
           <i class="fa fa-file"></i>
@@ -23,7 +21,7 @@
             <%= fa_icon "trash" %>
           <% end %>
         </li>
-      <% end %>    
-    <% end %>
+      <% end %>        
+      
   </ul>
 <% end %>
