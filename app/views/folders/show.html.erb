@@ -5,10 +5,8 @@
 
 	<div class="breadcrumbs">
 	  <h4>
-  	    <%= link_to(root_path ) do %>
-          <%= fa_icon "home" %>
-        <% end %>
-	  	Path: / <%= render 'shared/path_display' %> <%= "#{@folder.name} /" %>	  		
+        <%= render 'shared/root_path' %>
+        <%= render 'shared/path_display' %> <%= "#{@folder.name} /" %>	  		
 	  </h4>
 	</div>
 
