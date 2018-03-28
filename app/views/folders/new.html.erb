@@ -7,7 +7,7 @@
 	</div>
 
 	<%= form_for @folder do |f| %>
-	  <%= render 'error_messages' %>
+	  <%= render 'shared/error_messages', object: f.object %>
 	  <%= f.label 'Enter folder name:' %> <br>
 	  <%= f.text_field :name, placeholder: 'Folder Name' %> <br>
 	  <%= f.hidden_field :parent_id, :value => params[:folder_id] %> 

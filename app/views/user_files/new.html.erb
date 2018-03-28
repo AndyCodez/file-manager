@@ -7,7 +7,7 @@
 	</div>
 
 	<%= form_for @user_file do |f| %>
-	  <%= render 'error_messages' %>
+	  <%= render 'shared/error_messages', object: f.object %>
 	  <%= f.label "Please select a file to upload" %>
 	  <%= f.file_field :file %>
 	  <%= f.hidden_field :folder_id, :value => params[:folder_id] %>
