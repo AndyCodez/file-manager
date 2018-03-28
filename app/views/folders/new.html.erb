@@ -1,5 +1,14 @@
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
+  	<div class="breadcrumbs">
+	  <h4>
+	    <%= link_to(root_path) do %>
+          <%= fa_icon "home" %>
+        <% end %>
+	    Path: /
+	  </h4>
+	</div>
+
 	<%= form_for @folder do |f| %>
 	  <%= render 'error_messages' %>
 	  <%= f.label 'Enter folder name:' %> <br>
