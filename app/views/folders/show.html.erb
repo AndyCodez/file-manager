@@ -1,9 +1,13 @@
-<%= link_to "Upload File", new_user_file_path(folder_id: @folder.id), class: 'btn btn-primary' %>
-<%= link_to "Create Folder", new_folder_path(folder_id: @folder.id), class: 'btn btn-primary' %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+	<%= link_to "Upload File", new_user_file_path(folder_id: @folder.id), class: 'btn btn-primary' %>
+	<%= link_to "Create Folder", new_folder_path(folder_id: @folder.id), class: 'btn btn-primary' %>
 
-<div class="breadcrumbs">
-  Path: / <%= render 'shared/path_display' %> <%= "#{@folder.name} /" %>	
+	<div class="breadcrumbs">
+	  Path: / <%= render 'shared/path_display' %> <%= "#{@folder.name} /" %>	
+	</div>
+
+
+	<%= render 'shared/display_contents' %>
+  </div>
 </div>
-
-
-<%= render 'shared/display_contents' %>
