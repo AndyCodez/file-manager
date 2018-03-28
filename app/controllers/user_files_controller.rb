@@ -8,7 +8,12 @@ class UserFilesController < ApplicationController
   	@user_file = UserFile.new(user_file_params)
   	if @user_file.save
   		flash[:success] = "File successfully uploaded."
-  		redirect_to root_path
+      if @user_file.folder_id.nil?
+        redirect_to root_url
+      else
+        folder = Folder.find(@user_file.folder_id)
+        redirect_to folder 
+      end
   	else
   		render 'new'
   	end
