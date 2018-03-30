@@ -1,0 +1,39 @@
+<div id="folderModal" class="modal">
+	<div class="modal-content">
+		<div class="modal-header">
+		  <span class="close">&times;</span>
+		  <h2>Enter folder name</h2>
+		</div>
+		<div class="modal-body">
+			<%= form_for Folder.new do |f| %>
+			  <%= render 'shared/error_messages', object: f.object %>
+			  
+			  <%= f.text_field :name, placeholder: 'Folder Name' %> <br>
+			  <%= f.hidden_field :parent_id, :value => params[:id] %> 
+			  <%= f.submit 'Save', class: 'btn btn-primary' %>
+			<% end %>   	
+		</div>
+		<div class="modal-footer"></div>
+	</div>
+</div>
+
+<div id="fileModal" class="modal">
+	<div class="modal-content">
+		<div class="modal-header">
+		  <span class="close">&times;</span>
+		  <h2>Please select a file to upload</h2>
+		</div>
+		<div class="modal-body">
+		  <%= form_for UserFile.new do |f| %>
+		    <%= render 'shared/error_messages', object: f.object %>
+			  
+	  	    <%= f.file_field :file %>
+			<%= f.hidden_field :folder_id, :value => params[:id] %>
+			<%= f.submit 'Upload file', class: "btn btn-primary" %>
+		  <% end %>  	
+		</div>
+		<div class="modal-footer"></div>
+	</div>
+</div>
+
+<%= javascript_include_tag "modal.js" %>
