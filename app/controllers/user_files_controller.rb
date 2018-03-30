@@ -11,6 +11,7 @@ class UserFilesController < ApplicationController
       if @user_file.root?
         redirect_to root_url
       else
+        # Folder the file belongs to
         folder = Folder.find(@user_file.folder_id)
         redirect_to folder 
       end
