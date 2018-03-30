@@ -8,7 +8,7 @@ class FoldersController < ApplicationController
   	@folder = Folder.new(folder_params)
   	if @folder.save
   		flash[:success] = 'Folder created successfully.'
-  		@folder.parent ? (redirect_to @folder.parent) : (redirect_to root_path)
+  		@folder.has_parent? ? (redirect_to @folder.parent) : (redirect_to root_path)
   	else
   		render 'new'
   	end
