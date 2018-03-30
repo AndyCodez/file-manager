@@ -6,6 +6,17 @@ body {
   line-height: 2em;
 }
 
+.alert {
+	position: absolute;
+	top: 8;
+    z-index: 99;
+    width: 100%;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 2.5rem 0;
+    letter-spacing: 1px;
+}
+
 i.fa {
   font-size: 25px;
   &.fa-trash {
@@ -17,4 +28,7 @@ i.fa {
 /* forms */
 #error_explanation {
   color: red;
+  .alert {
+        position: static;
+    }
 }
